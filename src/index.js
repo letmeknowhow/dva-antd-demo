@@ -5,8 +5,6 @@ import createLoading from 'dva-loading';
 // 1. Initialize
 const app = dva();
 
-app.model(require('./models/users'));
-
 // 通过dva-loading处理loading状态
 app.use(createLoading());
 
@@ -14,7 +12,7 @@ app.use(createLoading());
 // app.use({});
 
 // 3. Model
-// app.model(require('./models/example'));
+app.model(require('./models/users'));
 
 // 4. Router
 app.router(require('./router'));
